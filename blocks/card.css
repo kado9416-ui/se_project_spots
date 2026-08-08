@@ -6,15 +6,12 @@
   margin: 0;
   font-family: "Poppins", Arial, sans-serif;
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.2;
   max-width: 353px;
   font-size: 20px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
 }
 
 .card__image {
@@ -44,5 +41,8 @@
 @media screen and (max-width: 627px) {
   .card__image {
     height: 288px;
+    .card__title {
+      height: 288px;
+    }
   }
 }
