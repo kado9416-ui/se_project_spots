@@ -41,8 +41,8 @@
 @media screen and (max-width: 627px) {
   .card__image {
     height: 288px;
-    .card__title {
-      max-width: 235px;
-    }
+  }
+  .card__title {
+    max-width: 235px;
   }
 }
