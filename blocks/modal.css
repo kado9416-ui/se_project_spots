@@ -1,0 +1,103 @@
+.modal {
+  visibility: hidden;
+  background-color: #00000080;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.modal_is-opened {
+  visibility: visible;
+}
+
+.modal__container {
+  max-width: 730px;
+  max-height: 408px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 32px 50px;
+  position: relative;
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 32px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/spots-images/Close\ Icon.svg);
+  background-color: transparent;
+  border: none;
+}
+
+.modal__title {
+  margin: 0 0 32px;
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 100%;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.modal__input {
+  display: block;
+  margin: 8px 0 0;
+  width: 100%;
+  padding: 16px 12px;
+  border-radius: 8px;
+  border: 1px solid #212121;
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.modal__label {
+  margin: 0 0 32px;
+}
+
+.modal__input::placeholder {
+  color: #2121214d;
+}
+
+.modal__submit-button {
+  margin: 32px 0 0;
+  width: 156px;
+  height: 52px;
+  border-radius: 8px;
+  background-color: #212121;
+  font-size: 16px;
+  line-height: 100%;
+  color: #fcf5e5;
+  border: none;
+  padding: 18px 32px;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  gap: 8px;
+}
+
+@media screen and (max-width: 300px) {
+  .modal__container {
+    height: 336px;
+  }
+  .modal__title {
+  }
+
+  .modal__submit-button {
+    width: 276px;
+  }
+}
