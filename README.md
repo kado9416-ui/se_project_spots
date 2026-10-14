@@ -12,7 +12,7 @@ This project is made so all the elements are displayed correctly on popular scre
 
 **Figma**
 
-- [Link to project through Figma](https://www.figma.com/design/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project--Spots?node-id=0-1)
+- [Link to project through GitHub](https://kado9416-ui.github.io/se_project_spots/)
 
 **Images**
 

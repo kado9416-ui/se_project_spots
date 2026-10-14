@@ -5,8 +5,11 @@
   top: 0;
   right: 0;
   bottom: 0;
+  opacity: 0;
+  pointer-events: none;
   left: 0;
   display: flex;
+  transition: opacity 0.3s ease-in-out;
   align-items: center;
   justify-content: center;
   padding: 10px;
@@ -24,9 +27,11 @@
   background-color: #fff;
   padding: 32px 50px;
   position: relative;
+  box-sizing: border-box;
 }
 
-.modal__close-button {
+.modal__close-button:hover {
+  opacity: 0.85;
   position: absolute;
   top: 32px;
   right: 50px;
@@ -35,6 +40,8 @@
   background-image: url(../images/spots-images/Close\ Icon.svg);
   background-color: transparent;
   border: none;
+  cursor: pointer;
+  transition: opacity 150ms ease;
 }
 
 .modal__title {
@@ -84,17 +91,14 @@
   color: #fcf5e5;
   border: none;
   padding: 18px 32px;
-  justify-content: center;
   align-items: center;
   max-width: 100%;
   gap: 8px;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 480px) {
   .modal__container {
     height: 336px;
-  }
-  .modal__title {
   }
 
   .modal__submit-button {
