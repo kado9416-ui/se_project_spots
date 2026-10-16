@@ -1,3 +1,10 @@
+function openModal(modal) {
+  modal.classList.add("modal_is-opened");
+}
+function closeModal(modal) {
+  modal.classList.remove("modal_is-opened");
+}
+
 const editProfileButton = document.querySelector(".profile__edit-button");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseButton = editProfileModal.querySelector(
@@ -20,6 +27,7 @@ editProfileButton.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
   openModal(editProfileModal);
+  console.log(editProfileModal);
 });
 
 editProfileCloseButton.addEventListener("click", function () {
@@ -30,12 +38,11 @@ newPostButton.addEventListener("click", function () {
   const newPostModal = document.querySelector("#new-post-modal");
   const addCardForm = newPostModal.querySelector(".modal__form");
   const linkInput = newPostModal.querySelector("#card-image-input");
-  const captionInput = newPostModal.querySelector("#card-caption-input");
+  const captionInput = newPostModal.querySelector("#description-input");
   function handleAddCardSubmit(evt) {
     evt.preventDefault();
     console.log(linkInput.value, captionInput.value);
   }
-  addCardForm.addEventListener("submit", handleAddCardSubmit);
   openModal(newPostModal);
 });
 
@@ -45,9 +52,20 @@ newPostCloseButton.addEventListener("click", function () {
 
 function handleEditProfileSubmit(event) {
   event.preventDefault();
+  console.log("submit fired");
   profileNameEl.textContent = editProfileNameInput.value;
   profileDescriptionEl.textContent = editProfileDescriptionInput.value;
   closeModal(editProfileModal);
 }
 
-editProfileForm.addEventListener("submit", handleEditProfileSubmit);
+const newPostForm = newPostModal.querySelector(".modal__form");
+
+newPostForm.addEventListener("submit", handleAddCardSubmit);
+
+function handleAddCardSubmit(event) {
+  event.preventDefault();
+  console.log("submit fired");
+  newPostImage.src = linkInput.value;
+  newPostCaption.textContent = captionInput.value;
+  closeModal(newPostModal);
+}
